@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace uc1anduc5CalculatingFare
+namespace UC2anduc3MultipleRides
 {
     //Enum type for rides
     public enum RideType
