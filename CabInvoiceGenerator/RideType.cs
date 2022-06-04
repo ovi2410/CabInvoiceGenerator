@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UC4_rideRepository
+namespace uc1anduc5CalculatingFare
 {
     //Enum type for rides
     public enum RideType
     {
         NORMAL_RIDE, PREMIUM_RIDE
     }
-
 }
