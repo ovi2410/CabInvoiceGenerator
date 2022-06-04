@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UC4_rideRepository
+namespace uc1anduc5CalculatingFare
 {
     public class InvoiceGenerator
     {
-
         //Declaring ride Type
         RideType type;
-        public RideRepository rideRepository;
         //Declaring Varaibles
         private double MINIMUM_COST_PER_KM;
         private int COST_PER_TIME;
@@ -20,7 +18,6 @@ namespace UC4_rideRepository
         public InvoiceGenerator(RideType type)
         {
             this.type = type;
-            this.rideRepository = new RideRepository();
             //Initializing varaibles for Normal Ride
             if (type.Equals(RideType.NORMAL_RIDE))
             {
@@ -66,28 +63,5 @@ namespace UC4_rideRepository
             }
             return Math.Max(totalFare, MINIMUM_FARE);
         }
-        //Method to calculate the totalfare for multiple rides 
-        public InvoiceSummary CalculateFare(Ride[] rides)
-        {
-            double totalFare = 0;
-            try
-            {
-                if (rides == null)
-                {
-                    throw new CustomException(CustomException.ExceptionType.NULL_RIDES, "No rides found");
-                }
-                foreach (Ride ride in rides)
-                {
-                    totalFare += this.CalculateFare(ride.distance, ride.time);
-                }
-            }
-            catch (CustomException ex)
-            {
-                Console.WriteLine(ex.message);
-            }
-            return new InvoiceSummary(rides.Length, totalFare);
-        }
     }
 }
-
-
