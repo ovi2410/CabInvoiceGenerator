@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UC4_rideRepository
+namespace UC2anduc3MultipleRides
 {
     //custom Exception-Invalid Distance,Invalid Time
     public class CustomException : Exception
@@ -14,7 +14,7 @@ namespace UC4_rideRepository
 
         public enum ExceptionType
         {
-            INVALID_DISTANCE, INVALID_TIME, NULL_RIDES, INVALID_USER_ID
+            INVALID_DISTANCE, INVALID_TIME, NULL_RIDES
         }
         public CustomException(ExceptionType type, string message) : base(message)
         {

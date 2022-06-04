@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UC4_rideRepository
+namespace UC2anduc3MultipleRides
 {
     public class InvoiceGenerator
     {
-
         //Declaring ride Type
         RideType type;
-        public RideRepository rideRepository;
         //Declaring Varaibles
         private double MINIMUM_COST_PER_KM;
         private int COST_PER_TIME;
@@ -20,7 +18,6 @@ namespace UC4_rideRepository
         public InvoiceGenerator(RideType type)
         {
             this.type = type;
-            this.rideRepository = new RideRepository();
             //Initializing varaibles for Normal Ride
             if (type.Equals(RideType.NORMAL_RIDE))
             {
@@ -89,5 +86,4 @@ namespace UC4_rideRepository
         }
     }
 }
-
 
