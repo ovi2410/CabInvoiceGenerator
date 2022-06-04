@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UC2anduc3MultipleRides
+namespace UC4_rideRepository
 {
     public class Ride
     {
